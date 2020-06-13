@@ -1,0 +1,77 @@
+.login {
+  position: relative;
+  overflow: hidden;
+  //   background: url("../../assets/images/bg0824b.png") 100% no-repeat;
+  background-size: cover;
+  &-form {
+    width: 500px;
+    margin: 0 auto;
+    background: hsla(0, 0%, 100%, 0.9);
+    -webkit-box-shadow: 0 10px 18px 2px rgba(140, 119, 105, 0.21);
+    box-shadow: 0 10px 18px 2px rgba(140, 119, 105, 0.21);
+    border-radius: 12px;
+    padding: 25px 25px 10px 25px;
+
+    &-title {
+      margin-bottom: 20px;
+      color: #666;
+      font-weight: 400;
+      font-size: 22px;
+    }
+    &-user--icon {
+      width: 24px;
+      height: 24px;
+      display: inline-block;
+      background: url('../../assets/images/user.png') no-repeat;
+      position: absolute;
+      top: 12px;
+      left: 8px;
+    }
+    &-password--icon {
+      width: 24px;
+      height: 24px;
+      display: inline-block;
+      background: url('../../assets/images/lock.png') no-repeat;
+      position: absolute;
+      top: 12px;
+      left: 8px;
+    }
+    .ant-form-item {
+      position: relative;
+    }
+    .ant-input {
+      height: 50px;
+      padding-left: 40px !important;
+      font-size: 14px;
+      border-radius: 5px !important;
+    }
+    .ant-input-affix-wrapper {
+      padding: 0;
+      border-radius: 5px !important;
+    }
+    .ant-input-suffix {
+      width: 20px;
+    }
+    .ant-btn {
+      width: 100%;
+      height: 40px;
+      background: #3477bd;
+      border-color: #3477bd;
+      border-radius: 6px;
+      font-size: 16px;
+      &:hover {
+        background: #3477bd;
+        border-color: #3477bd;
+      }
+      &:focus {
+        box-shadow: none;
+      }
+    }
+  }
+  &-bg {
+    width: 100%;
+  }
+  &-row {
+    height: 100vh;
+  }
+}

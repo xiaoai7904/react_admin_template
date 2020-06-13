@@ -1,0 +1,30 @@
+
+body {
+    overflow: hidden;
+    font-family: Arial, Helvetica, SimSun, sans-serif;
+  }
+  
+  input[type=number] {
+    -moz-appearance:textfield;
+  }
+  input[type=number]::-webkit-inner-spin-button,
+  input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  
+  // 自定义webkit滚动条样式
+  ::-webkit-scrollbar {
+    width: 7px;
+    height: 7px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    border-radius: 5px;
+    background-color: #fbfbfb !important;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background: #cacaca !important;
+  }
