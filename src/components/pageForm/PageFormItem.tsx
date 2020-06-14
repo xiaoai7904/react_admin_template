@@ -1,5 +1,5 @@
 import React from 'react';
-import { PageFormPropsConfigItem } from './PageForm.types';
+import { PageFormPropsConfigItem } from './PageForm';
 import { Input, InputNumber, Select, Button, DatePicker, Switch, Radio } from 'antd';
 import { usePageFormItemHook } from './PageForm.hook';
 import { FormInstance } from 'antd/lib/form';
@@ -15,6 +15,9 @@ export const PageFormItem = (props: { config: PageFormPropsConfigItem; form: For
       break;
     case 'inputNumber':
       pageFormItemElement = <InputNumber min={config.options?.min} max={config.options?.max} disabled={config.options?.disabled} />;
+      break;
+    case 'inputPassword':
+      pageFormItemElement = <Input.Password disabled={config.options?.disabled} />;
       break;
     case 'textArea':
       pageFormItemElement = <Input.TextArea disabled={config.options?.disabled} />;

@@ -1,4 +1,4 @@
-import { PageFormProps, PageFormPropsConfigItem, PageFormHook } from './PageForm.types';
+import { PageFormProps, PageFormPropsConfigItem, PageFormHook } from './PageForm';
 import { Form } from 'antd';
 import { useState, useImperativeHandle } from 'react';
 import { useMount, useUnmount, useLocalStorageState, useRequest } from '@umijs/hooks';
@@ -51,7 +51,9 @@ export const usePageFormHook = (props: PageFormProps, ref: any): PageFormHook =>
       defaultHiddenIds.map((item: string) => (formData[item] = formMore.getFieldValue(item)));
       return formData;
     },
-    setData: (key: string, value: any) => {},
+    setData: (key: string, value: any) => {
+      form.setFieldsValue({[key]: value})
+    },
     resetData: () => {
       form.resetFields();
       formMore.resetFields();

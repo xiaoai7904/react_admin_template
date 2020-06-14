@@ -1,6 +1,6 @@
 import React, { ReactElement, forwardRef } from 'react';
 import { Form, Popover, Button } from 'antd';
-import { PageFormProps, PageFormPropsConfigItem } from './PageForm.types';
+import { PageFormProps, PageFormPropsConfigItem } from './PageForm';
 import usePageFormHook from './PageForm.hook';
 import { PageFormItem } from './PageFormItem';
 import { PageScrollbar } from '../pageScrollbar/PageScrollbar.view';

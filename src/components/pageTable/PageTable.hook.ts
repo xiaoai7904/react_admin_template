@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { PageTableProps } from './PageTable.types';
+import { PageTableProps } from './PageTable';
 import useUpdateEffect from '@umijs/hooks/lib/useUpdateEffect';
 import { useMount } from '@umijs/hooks';
 

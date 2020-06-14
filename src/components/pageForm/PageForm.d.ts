@@ -9,6 +9,7 @@ export interface PageFormProps {
     config: PageFormPropsConfigItem[];
     rules?: any;
     isModal?: boolean;
+    forceRender?:boolean;
   };
 }
 export interface layout {
