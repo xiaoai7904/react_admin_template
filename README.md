@@ -6,7 +6,7 @@ Vue后台模版请访问另一项目[vue后台模版](https://github.com/xiaoai7
 
 **如果对您对此项目有兴趣，可以点 "Star" 支持一下 谢谢！** 😊
 
-[在线预览](https://xiaoai7904.github.io/vue_admin_template/)
+[在线预览](https://xiaoai7904.github.io/react_admin_template/)
 
 ### 介绍
 
