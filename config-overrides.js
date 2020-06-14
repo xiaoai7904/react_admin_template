@@ -104,7 +104,7 @@ module.exports = {
   devServer: overrideDevServer(devServerConfig()),
   webpack: override(
     (config) => {
-      config.output['publicPath'] = process.env.NODE_ENV === 'production' ? '/react_admin_template' : '/';
+      config.output['publicPath'] = '/';
       return config;
     },
     ...addBabelPlugins(['@babel/plugin-proposal-decorators', { legacy: true }]),

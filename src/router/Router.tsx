@@ -1,4 +1,4 @@
-import { Switch, Route, Router, Redirect } from 'react-router-dom';
+import { Switch, Route, Router, Redirect, HashRouter } from 'react-router-dom';
 import pageHistory from './PageHistory';
 import React, { ReactElement } from 'react';
 import RouterInterceptor from './RouterInterceptor';
@@ -12,13 +12,16 @@ export interface RouterAppProps extends CommonProps {
 export const RouterApp = (props: RouterAppProps): ReactElement => {
   
   return (
-    <Router history={pageHistory}>
+    // 建议使用history模式 因为部署到githuapages原因暂时使用hash路由模式
+    // <Router history={pageHistory}>
+      <HashRouter>
       <Switch>
         {props.routerList.map((router: any, index: any) => {
           return <RouterInterceptor key={index} path={router.path} router={router} location={location} firstPath={props.firstPath}/>;
         })}
       </Switch>
-    </Router>
+      </HashRouter>
+    // </Router>
   );
 };
 
