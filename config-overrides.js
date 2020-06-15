@@ -90,12 +90,14 @@ const debugePluginsLoader = () => (config) => {
         minRatio: 0.8,
       })
     );
-  }
-  const path = require('path');
+
+    const path = require('path');
  
-  const paths = require("react-scripts/config/paths");
-  paths.appBuild = path.join(path.dirname(paths.appBuild), "docs");
-  config.output.path = path.join(path.dirname(config.output.path), "docs");
+    const paths = require("react-scripts/config/paths");
+    paths.appBuild = path.join(path.dirname(paths.appBuild), "docs");
+    config.output.path = path.join(path.dirname(config.output.path), "docs");
+  }
+  
 
   return config;
 };
@@ -104,7 +106,7 @@ module.exports = {
   devServer: overrideDevServer(devServerConfig()),
   webpack: override(
     (config) => {
-      config.output['publicPath'] = '';
+      config.output['publicPath'] = process.env.NODE_ENV === 'production' ? '' : '/';
       return config;
     },
     ...addBabelPlugins(['@babel/plugin-proposal-decorators', { legacy: true }]),

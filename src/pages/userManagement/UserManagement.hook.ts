@@ -94,7 +94,7 @@ export const UseUserManagementHook = () => {
       total: 1000,
     },
   };
-  const defalutPageModalOptions: ModalProps = { title: '用户管理' };
+  const defalutPageModalOptions: ModalProps = { title: '用户管理', forceRender: true };
   const defalutPageModalFormOptions: PageFormProps = {
     options: {
       isModal: true,
@@ -142,9 +142,12 @@ export const UseUserManagementHook = () => {
       console.log('搜索', pageModalFormRef.current.getData());
     },
   });
-  
+
   const add = () => {
     setShowModal(true);
+    setTimeout(() => {
+      pageModalFormRef.current.resetData();
+    }, 100);
   };
 
   const edit = (text: string, record: any, index: number) => {
