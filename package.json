@@ -57,5 +57,6 @@
   },
   "devDependencies": {
     "@types/js-md5": "^0.4.2"
-  }
+  },
+  "homepage": "https://github.com/xiaoai7904/vue_admin_template"
 }
