@@ -1,5 +1,5 @@
 import { useMount, useUnmount, useLocalStorageState, useRequest } from '@umijs/hooks';
-import { Form } from 'antd';
+import { Form, notification } from 'antd';
 import { FormInstance } from 'antd/lib/form';
 import SystemConfig from '@/module/systemConfig/SystemConfig';
 import Http from '@/module/http/Http';
@@ -19,7 +19,7 @@ export const useLoginHook = (props: LoginProps): LoginHook => {
     requestMethod: (data: any) => new Http().post(SystemConfig.login, data),
     onSuccess: (result) => {
       setIsLogin(true);
-      props.history?.push('/')
+      props.history?.push('/');
       // GetUserInfoRequest.run();
     },
   });
@@ -31,7 +31,7 @@ export const useLoginHook = (props: LoginProps): LoginHook => {
       let systemMenuIns = new CreateSystemMenu().create(result.data.menuList);
       globalStore.setRouterList(systemMenuIns.getRouterList());
       globalStore.setMenuList(systemMenuIns.getMenuList());
-      props.history?.push('/')
+      props.history?.push('/');
     },
   });
 
@@ -52,6 +52,12 @@ export const useLoginHook = (props: LoginProps): LoginHook => {
       });
 
       form.setFieldsValue({ username });
+
+      notification.success({
+        message: '提示',
+        description: '账号:admin，密码:123123',
+        duration: null
+      });
     });
     // 组件销毁
     useUnmount(() => {
