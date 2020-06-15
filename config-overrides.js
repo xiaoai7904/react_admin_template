@@ -103,10 +103,10 @@ const debugePluginsLoader = () => (config) => {
 module.exports = {
   devServer: overrideDevServer(devServerConfig()),
   webpack: override(
-    (config) => {
-      config.output['publicPath'] = process.env.NODE_ENV === 'production' ? '/react_admin_template' : '/';
-      return config;
-    },
+    // (config) => {
+    //   config.output['publicPath'] = process.env.NODE_ENV === 'production' ? '/react_admin_template' : '/';
+    //   return config;
+    // },
     ...addBabelPlugins(['@babel/plugin-proposal-decorators', { legacy: true }]),
     //配置别名
     addWebpackAlias({
