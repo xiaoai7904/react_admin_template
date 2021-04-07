@@ -1,6 +1,6 @@
 # react_admin_template
 
-React hook & Typescript 中台系统模版
+React hook & Typescript 后台管理系统模版
 
 Vue后台模版请访问另一项目[vue后台模版](https://github.com/xiaoai7904/vue_admin_template)
 
